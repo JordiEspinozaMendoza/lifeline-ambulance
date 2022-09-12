@@ -257,7 +257,7 @@ export const MapComponent = () => {
             lat: myLocation?.lat,
             lng: myLocation?.lng,
           }}
-          defaultZoom={15}
+          defaultZoom={19}
           options={{ styles: mapStyles }}
         >
           <div

@@ -16,9 +16,16 @@ export const MapComponent = () => {
   const [userLocation, setUserLocation] = useState();
   const [fetchAmbulance, setFetchAmbulance] = useState({
     loading: false,
-    success: false,
+    success: true,
     error: false,
-    data: {},
+    data: {
+      _id: "123",
+      plate: "123",
+      driver: {
+        name: "John",
+        lastName: "Doe",
+      }
+    },
   });
   async function fetchAmbulanceData() {
     setFetchAmbulance({
@@ -59,7 +66,7 @@ export const MapComponent = () => {
   };
 
   useEffect(() => {
-    fetchAmbulanceData();
+    // fetchAmbulanceData();
     getUseLocation();
   }, []);
   useEffect(() => {
